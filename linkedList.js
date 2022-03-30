@@ -1,4 +1,4 @@
-class LinkedList {
+export class LinkedList {
   constructor() {
     this.head = null; // First element of the list
     this.next = null; // Last element of the list
