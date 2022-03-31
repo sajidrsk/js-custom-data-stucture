@@ -48,6 +48,22 @@ export class LinkedList {
     }
   }
 
+  deleteHead() {
+    if (!this.head) {
+      return;
+    }
+    const deletedItem = this.head;
+
+    if (this.head.next) {
+      this.head = this.head.next;
+    } else {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return deletedItem;
+  }
+
   insertAfter(value, afterValue) {
     const existingNode = this.find(afterValue);
 
@@ -85,19 +101,19 @@ export class LinkedList {
   }
 }
 
-const linkList = new LinkedList();
+// const linkList = new LinkedList();
 
-linkList.append("sajid");
-linkList.append(123);
-linkList.prepend(true);
-linkList.append("sheikh");
-linkList.append("sheikh");
-linkList.prepend("rashid");
-linkList.prepend("rashid");
-linkList.insertAfter("after123", 123);
-linkList.delete("rashid");
+// linkList.append("sajid");
+// linkList.append(123);
+// linkList.prepend(true);
+// linkList.append("sheikh");
+// linkList.append("sheikh");
+// linkList.prepend("rashid");
+// linkList.prepend("rashid");
+// linkList.insertAfter("after123", 123);
+// linkList.delete("rashid");
 
-console.log(linkList.toArray());
+// console.log(linkList.toArray());
 
 /**
  * expected output =>
