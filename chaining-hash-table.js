@@ -55,4 +55,4 @@ hash.set("sheikh", "sheikh");
 console.log(hash.get("123"));
 console.log(hash.get("321"));
 console.log(hash.get("231"));
-console.log(hash.showInfo());
+hash.showInfo();
